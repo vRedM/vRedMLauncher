@@ -14,7 +14,7 @@ Ce projet est un launcher pour RedM (Red Dead Redemption 2 Multiplayer) dévelop
 
 1. Clonez ce dépôt sur votre machine locale :
 ```bash
-git clone [https://github.com/votre-utilisateur/votre-depot.git](https://github.com/vRedM/vRedMLauncher.git)
+git clone https://github.com/vRedM/vRedMLauncher.git
 ```
 
 2. Accédez au répertoire du projet :
