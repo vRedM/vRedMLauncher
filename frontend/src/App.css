@@ -1,0 +1,150 @@
+#App {
+    background-image: url('./assets/images/rdr2.jpg'); /* Chemin vers l'image */
+    background-size: cover; /* Pour couvrir toute la zone */
+    background-position: center; /* Centrer l'image */
+    height: 100vh; /* Prendre toute la hauteur de la fenêtre */
+    width: 100vw; /* Prendre toute la largeur de la fenêtre */
+    display: flex; /* Utilisation de flexbox pour l'agencement */
+    flex-direction: row; /* Alignement horizontal des containers */
+    justify-content: space-between; /* Espacement entre les containers */
+    align-items: center; /* Alignement vertical */
+    color: white; /* Couleur du texte */
+    overflow: hidden; /* Empêche les débordements */
+}
+
+.custom-titlebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    -webkit-app-region: drag; /* Permet de déplacer la fenêtre */
+    padding: 0 1rem;
+    z-index: 1000; /* Toujours au-dessus */
+    color: white;
+}
+
+.custom-titlebar .window-controls {
+    display: flex;
+    gap: 1rem;
+    -webkit-app-region: no-drag; /* Empêche le drag sur les boutons */
+}
+
+.window-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.2rem 0.5rem;
+    transition: background 0.3s ease;
+}
+
+.window-button:hover {
+    background-color: rgba(0, 0, 0, 1); /* Fond léger au survol */
+}
+
+.window-button.close {
+    color: #f6f6f6;
+}
+
+.window-button.close:hover {
+    background-color: rgb(255, 0, 0);
+}
+
+/* Header */
+.header {
+    
+    position: absolute; /* Position fixe en haut */
+    top: 7vh; /* En haut de la page */
+    right: 3vh; /* Aligné à droite */
+    display: flex;
+    gap: 3vh; /* Espacement entre les boutons */
+    padding: 1rem;
+    z-index: 1000; /* Toujours visible au-dessus du contenu */
+}
+
+.header-button {
+    background-color: transparent;
+    color: #f6f6f6; /* Texte sombre */
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-size: 2.5vh;
+    font-weight:500;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transition pour l'animation */
+}
+
+.header-button:hover {
+    color: #fcaf17; /* Changement de couleur au survol */
+}
+
+#logo {
+    width: 70%;
+}
+
+.container-left {
+    width: 30%; /* Largeur de 30% de l'écran */
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.button-play {
+    background-color: #f6f6f6;
+    width: 65%;
+    height: 4.5vw;
+    border-radius: 7px;
+    font-size: 3.5vh;
+    font-weight: 800;
+    box-shadow: 0 0 0 5px #f6f6f6,
+        inset 0 0 0 1px #fff,
+        12px 12px 10px rgba(0, 0, 0, 0.7);
+    margin-top: 7vh;
+}
+
+.button-play:hover {
+    background-color: #fcaf17;
+    box-shadow: 0 0 0 5px #fcaf17,
+        inset 0 0 0 1px #fcaf17,
+        12px 12px 10px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+}
+
+.container-right {
+    width: 70%; /* Largeur de 60% de l'écran */
+    display: flex;
+    justify-content: space-evenly; /* Espace égal entre les cartes */
+    align-items: flex-start;
+    gap: 2rem; /* Espacement entre les cartes */
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 1); /* Fond légèrement transparent */
+    width: 45%; /* Chaque carte prend 45% de la largeur du container droit */
+    padding: 0.4vw;
+    text-align: center; /* Centrer le texte */
+    box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.7);
+    transition: color 0.3s ease; /* Transition pour la couleur */
+    cursor: pointer;
+}
+
+.card:hover p {
+    color: #fcaf17; /* Changer la couleur du texte en jaune au survol */
+}
+
+.card img {
+    width: 100%; /* L'image prend toute la largeur de la carte */
+    height: auto;
+}
+
+.card p {
+    font-size: 0.8vw;
+    font-weight: bold;
+    color: #ffffff; /* Couleur sombre pour le texte */
+}
