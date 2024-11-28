@@ -1,7 +1,7 @@
 ![RedM Launcher Demo](launcher.gif)
 
 # RedM Launcher
-
+[Le Discord](https://discord.gg/fbffEhMhfU)
 ## Description
 Ce projet est un launcher pour RedM (Red Dead Redemption 2 Multiplayer) développé avec Wails et Go. Il permet de se connecter à différents serveurs en modifiant simplement l'adresse du serveur dans le code.
 
@@ -30,9 +30,9 @@ go install github.com/wailsapp/wails/v2/cmd/wails@latest
 ```
 
 ## Utilisation
-
-1. Ouvrez le fichier source du projet `main.go`
-2. Modifiez l'adresse du serveur dans le code suivant pour vous connecter à votre serveur préféré :
+1. allez dans frontend puis yarn install pour dev allez à la racine et faites wails dev
+2. Ouvrez le fichier source du projet `main.go`
+3. Modifiez l'adresse du serveur dans le code suivant pour vous connecter à votre serveur préféré :
 
 ```go
 fmt.Println("Tentative de connexion à Lawless...")
@@ -44,9 +44,9 @@ if err != nil {
 }
 ```
 
-3. Remplacez "rdr.lawless-street.fr" par l'adresse de votre serveur
+4. Remplacez "rdr.lawless-street.fr" par l'adresse de votre serveur
 
-4. Compilez et exécutez le programme avec Wails :
+5. Compilez et exécutez le programme avec Wails :
 ```bash
 wails build
 ./build/vRedMLauncher
